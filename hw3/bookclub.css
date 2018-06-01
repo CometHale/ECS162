@@ -1,0 +1,534 @@
+body {
+	min-height: 100vh;  /* need this line to 
+					tell body to fill viewport */
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	color:#4C78FB;
+}
+
+header {
+   text-align: center;
+   padding: 10px;  
+}
+
+
+h1 {
+   font-size: x-large;
+   font-weight: 700;
+   text-align: left;
+   margin-top:2%;
+   margin-left:2%;
+   margin-bottom: 5%;
+}
+
+
+main {
+	display: flex;
+	flex-direction: column;
+    flex: 1 0 auto;  /* the sticky footer trick without the footer */
+}
+
+
+div#bookDisplay{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+  	justify-content: center;
+}
+
+div#form-wrapper{
+	display:flex;
+	flex-direction: column;
+	margin:0 auto;
+	width:75vw;
+
+}
+
+div#form{
+	display: flex;
+	flex-direction: row;
+	margin:0 auto;
+}
+
+div#form div{
+	display: flex;
+	flex-direction: column;
+}
+
+div#form div label{
+	margin-bottom: 5%;
+	margin-left: 5%;
+	font-weight: 300;
+}
+
+div.no-cover-image{ /* may need to change this */
+	width:100px;
+	height:150px;
+	border:2px black solid;
+}
+
+::placeholder {
+    color:#c6c6c6;
+    font-weight: 300;
+    opacity: 1; /* Firefox */
+}
+
+input{
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	font-size: medium;
+	border-color:#4C78FB;
+	height:35px;
+	width:200px;
+	
+}
+
+p {
+	font-size: medium;
+	margin: 10px;
+	color:black;
+
+}
+
+p#search-help{
+	font-size:x-large;
+	font-weight: 300;
+	margin:0;
+}
+
+p.form-or{
+	margin-top:35px;
+	color:#4C78FB;
+	font-weight: 700;
+}
+
+button{
+	background-color: #4C78FB;
+	margin-top:3%;
+	width:100px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	color:white;
+	font-size:medium;
+	font-weight: 300;
+	border:none;
+	height:35px;
+}
+
+#overlay{
+	position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100vw; /* Full width (cover the whole page) */
+    height: 100vh; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer;  Add a pointer on hover */
+    white-space: nowrap;
+    flex-direction: column;
+}
+
+#success-search-navigation{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    justify-content: center;
+}
+
+#search-found, .book-tile{
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	width:45vw;
+	height: 35vw;
+	margin:0 auto;
+	align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#search-found img, #search-found div, .book-tile img, .book-tile div{
+	margin-top:auto;
+	margin-bottom: auto;
+}
+
+#search-found div{
+	margin-left: 1vw;
+}
+
+#search-found img{
+	width:18vw;
+	height: 28vw;
+	margin-left: 3vw;
+}
+
+.book-tile p{
+	margin-bottom: 5px;
+	margin-top:0;
+}
+
+.book-tile img{
+	width:10vw;
+	height: 18vw;
+	margin-left: 3vw;
+}
+
+
+.book-tile{
+	display: flex;
+	flex-direction: row;
+	box-shadow: 1px 1px 15px #888888;
+	margin-top: 5vw;
+	width:35vw;
+	height: 25vw;
+}
+
+.book-title{
+	font-weight: 700;
+	font-size: large;
+}
+
+.book-description{
+	font-weight: 300;
+	font-size: medium;
+}
+
+.book-authors{
+	font-weight: 300;
+	font-size: large;
+}
+
+.book-title-description{
+	display:flex;
+	flex-direction: column;
+	width:20vw;
+	height:25vw;
+}
+
+.book-title-description p{
+	width:20vw;
+	height: 2vh;
+    white-space: normal;
+}
+
+#search-not-found{
+	display: flex;
+	flex-direction: column;
+	margin:auto auto;
+	text-align: center;
+	line-height: 30px;
+}
+
+#search-not-found, #search-not-found p{
+	color:white;
+}
+
+.ui-button{
+	background:none;
+}
+
+.tile-close{
+	width:2%;
+	background:none;
+	color:black;
+	margin-left: 14vw;
+	width:10vw;
+
+}
+
+.not-found-text{
+	margin:0 5px;
+	font-weight: 700;
+}
+
+
+#success-close{
+	margin-left: auto;
+	margin-right: 0;
+	margin-bottom: 50px;
+	font-size: x-large;
+}
+
+.arrow{
+	border-radius: 10px;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	width:100px;
+	font-size: 25px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+@media(max-width: 500px){
+	#form-wrapper{
+		flex-direction: column;
+	}
+	
+	#form{
+		flex-direction: column;
+	}
+}
+
+@media(max-width: 480px){
+
+	header {
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+		padding: 10px;  
+		width:95%;
+		justify-content: space-between;
+	}
+
+
+	h1 {
+	   font-size: x-large;
+	   font-weight: 700;
+	   text-align: left;
+	   margin-top:auto;
+	   margin-bottom: auto;
+	   width:100%;
+	   z-index: 2;
+	}
+
+	div#form-wrapper{
+		display:flex;
+		flex-direction: column;
+		margin:0 auto;
+		width:100%;
+		order:-1;
+	}
+
+	div#form{
+		padding-top: 15px;
+		display: flex;
+		flex-direction: column;
+		margin:0 auto;
+		width:75%;
+		height: 50%;
+		padding-bottom: 15px;
+		order:-1;
+
+	}
+
+	div#form div{
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div#form div label{
+		margin-bottom: 1vh;
+		margin-left: 1vw;
+		font-weight: 300;
+	}
+
+	input{
+		border-style: solid;
+		border-radius: 10px;
+		border-width: 2px;
+		font-size: medium;
+		border-color:#4C78FB;
+		height:30px;
+		width:45vw;
+		
+	}
+
+	main {
+		width:100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	    flex: 1 0 auto;  /* the sticky footer trick without the footer */
+		align-items: center;
+	}
+
+	p#search-help{
+		font-size:large;
+		font-weight: 300;
+		margin:0;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		order:-1;
+	}
+
+	p.form-or{
+		margin-top:1vh;
+		margin-bottom:1vh;
+		color:#4C78FB;
+		font-weight: 700;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	button{
+		background-color: #4C78FB;
+		margin-top:3%;
+		width:45vw;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+		color:white;
+		font-size:medium;
+		font-weight: 300;
+		border:none;
+		height:35px;
+	}
+
+	/* Book selection */
+
+	#success-search-navigation{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	    justify-content: center;
+	}
+
+
+	#search-found{
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		width:70vw;
+		height: 50vh;
+		margin:0 auto;
+		align-items: flex-start;
+	    justify-content: flex-start;
+	}
+
+	#search-found .book-title-description{
+		display:flex;
+		flex-direction: column;
+		width:75%;
+		height:100%;
+	}
+
+	#search-found .book-title-description p{
+		width:70%;
+		height:auto;
+	    white-space: normal;
+	}
+
+	#search-found img{
+		width:35%;
+		height:70%;
+	}
+
+	.arrow{
+		border-radius: 10px;
+		border-color: white;
+		border-width: 1px;
+		border-style: solid;
+		width:100px;
+		font-size: 25px;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+	}
+
+	#search-found .book-title{
+		font-weight: 700;
+		font-size: medium;
+	}
+
+	#search-found .book-description{
+		font-weight: 300;
+		font-size: small;
+		width:70%;
+	}
+
+	#search-found .book-authors{
+		font-weight: 300;
+		font-size: medium;
+	}
+
+	/* Book shelf */
+
+	.book-tile div{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.book-tile p{
+		margin-bottom: 5px;
+		margin-top:0;
+	}
+
+	.book-tile img{
+		width:30vw;
+		height: 45vw;
+		margin-left: 3vw;
+	}
+
+
+	.book-tile{
+		display: flex;
+		flex-direction: row;
+		box-shadow: 1px 1px 15px #888888;
+		margin-top: 5vw;
+		width:75vw;
+		height: 60vw;
+	}
+
+	.book-tile .book-title{
+		font-weight: 700;
+		font-size: medium;
+		width:auto;
+		height: auto;
+	}
+
+	.book-tile .book-description{
+		font-weight: 300;
+		font-size: small;
+		width:auto;
+		height: auto;
+	}
+
+	.book-tile .book-authors{
+		font-weight: 300;
+		font-size: medium;
+		width:auto;
+		height: auto;
+	}
+
+	.book-tile .book-title-description{
+		display:flex;
+		flex-direction: column;
+		width:75%;
+		height:100%;
+	}
+
+	.book-tile .book-title-description p{
+	    white-space: normal;
+	    width:40vw;
+	}
+
+	.tile-close{
+		width:2%;
+		background:none;
+		color:black;
+		margin-left: 75%;
+		width:10vw;
+	}
+
+	#magnifying-glass{
+		margin-top:auto;
+	   	margin-bottom: auto;
+		text-align: right;
+		/*margin-left:60vw;*/
+		order:3;
+	}
+}
+

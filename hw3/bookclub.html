@@ -1,0 +1,67 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Make a Book List</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="bookclub.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> 
+</head>
+
+<body onresize="onResize()">
+
+<header>
+<h1>BOOK CLUB</h1>
+</header>
+
+
+<main>
+
+<div id="overlay">
+</div>
+
+<div id="form-wrapper">
+	<p id="search-help">Search for a book by...</p>
+
+	<div id="form">
+		<div name="author">
+			<label>Author</label>
+			<input id="author" placeholder="ex William Shakespeare">
+		</div>
+
+		<p class="form-or">or</p>
+
+		<div name="title">
+			<label>Title</label>
+			<input id="title" placeholder="ex Romeo and Juliet">
+		</div>
+
+		<p class="form-or">or</p>
+
+		<div name="isbn">
+			<label>ISBN</label>
+			<input id="isbn" placeholder="ex 000-0-00-000000-0">
+			 <!-- XXXXXXXXXX or XXX-XXXXXXXXXX -->
+		</div>
+	</div>
+	<button id="search-button" onclick="newRequest()">Search</button>
+</div>
+
+
+
+
+<div id="bookDisplay">
+</div>
+
+</main>
+
+<!-- The Javascript for this page -->
+<script src="bookclub.js"> </script>
+
+<!-- The JSONp request -->
+<script id="dummy"></script>  
+
+</body>
+</html>
