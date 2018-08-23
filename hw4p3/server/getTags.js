@@ -6,7 +6,7 @@ var url = require('url');
 var http = require('http');
 
 var imgList = [];
-var api_url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDv_eWtGOpSWzUMMPwW4Stu9u5Q87r_vC0';
+var api_url = 'https://vision.googleapis.com/v1/images:annotate?key=[KEY]';
 
 var data = fs.readFileSync('photoList.json');
 if (! data) {
