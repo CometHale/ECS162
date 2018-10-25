@@ -7,6 +7,7 @@
   },
   "main": "./server/SnDserver3.js",
   "scripts": {
+    "prestart": "node ./server/createDB.js",
     "start": "node ./server/SnDserver3.js"
   },
   "dependencies": {
