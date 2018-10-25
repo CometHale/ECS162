@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node ./server/SnDserver3.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pg": "^7.5.0"
+  },
   "devDependencies": {
     "fs": "^0.0.1-security",
     "http": "^0.0.0",
