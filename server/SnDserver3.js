@@ -4,6 +4,7 @@ var static = require('node-static');
 var fs = require('fs');  // file access module
 var sqlite3 = require("sqlite3").verbose();  // use sqlite
 var auto = require("./makeTagTable");
+const PORT = process.env.PORT || 5000
 
 var fileServer = new static.Server('./public');
 var dbFileName = "PhotoQ.db";
@@ -319,4 +320,4 @@ function handler(request, response) {
 
 var server = http.createServer(handler);
 
-server.listen("51262");
+server.listen(PORT);
