@@ -17,7 +17,7 @@ function tagTableCallback(data) {
 // global variables
 var fs = require('fs');  // file access
 var sqlite3 = require("sqlite3").verbose();
-var dbFileName = "PhotoQ.db";
+var dbFileName = "./PhotoQ.db";
 var db = new sqlite3.Database(dbFileName);
 var accents = require("remove-accents");
 
