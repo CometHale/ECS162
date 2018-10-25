@@ -7,21 +7,19 @@
   },
   "main": "./server/SnDserver3.js",
   "scripts": {
-    "prestart": "node ./server/createDB.js",
     "start": "node ./server/SnDserver3.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "http": "^0.0.0",
-    "tape": "^4.7.0",
-    "node-static": "^0.7.11",
     "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "image-size": "^0.6.3",
+    "node-static": "^0.7.11",
+    "remove-accents": "^0.4.2",
+    "request": "^2.88.0",
     "sqlite3": "^4.0.3",
-    "remove-accents":"^0.4.2",
-    "request":"^2.88.0",
-    "image-size":"^0.6.3",
-    "url":"^0.11.0"
+    "tape": "^4.7.0",
+    "url": "^0.11.0"
   },
   "repository": {
     "type": "git",
